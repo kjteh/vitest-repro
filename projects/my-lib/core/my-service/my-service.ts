@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from "@angular/core";
 
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: 'root', useFactory: () => new ChildService() })
 export abstract class BaseService {
   abstract foo(): string;
 }
