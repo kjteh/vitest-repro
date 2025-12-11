@@ -1,4 +1,4 @@
-import { BaseService } from '@my-lib';
+import { BaseService } from '@my-lib/core/my-service';
 
 const mockService = {
   foo: () => 'mock bar'

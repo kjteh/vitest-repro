@@ -3,22 +3,29 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strict": true,
+    "paths": {
+      "@my-lib/*": [
+        "./projects/my-lib/*"
+      ],
+      "@my-lib": [
+        "./projects/my-lib"
+      ]
+    },
+    "outDir": "./dist/out-tsc",
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "paths": {
-      "@my-lib/*": [
-        "./projects/my-lib/src/*"
-      ],
-      "@my-lib": [
-        "./projects/my-lib/src"
-      ]
-    },
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
     "experimentalDecorators": true,
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"

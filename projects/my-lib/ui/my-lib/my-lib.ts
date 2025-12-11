@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { BaseService } from './my-service';
+import { BaseService } from '@my-lib/core/my-service';
 
 @Component({
   selector: 'lib-my-lib',
