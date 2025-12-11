@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { BaseService } from './my-service';
 
 @Component({
   selector: 'lib-my-lib',
   imports: [],
   template: `
-    <p>
-      my-lib works!
-    </p>
+    <p>displayValue: {{ displayValue }}</p>
   `,
   styles: ``,
 })
 export class MyLib {
+  protected readonly myService = inject(BaseService);
+  protected displayValue = this.myService.foo();
 
+  getVal() {
+    return this.displayValue;
+  }
 }

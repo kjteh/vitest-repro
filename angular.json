@@ -27,6 +27,8 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
+            "runnerConfig": "vitest.config.ts",
+            "providersFile": "projects/my-lib/test.ts",
             "tsConfig": "projects/my-lib/tsconfig.spec.json"
           }
         }

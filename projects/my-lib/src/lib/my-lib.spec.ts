@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { MyLib } from './my-lib';
 
@@ -19,5 +20,6 @@ describe('MyLib', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(component.getVal()).toEqual('mock bar');
   });
 });
